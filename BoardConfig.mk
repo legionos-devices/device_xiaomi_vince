@@ -50,5 +50,8 @@ VENDOR_SECURITY_PATCH := 2019-03-05
 # Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
+#NeverAllows
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/vince/BoardConfigVendor.mk
