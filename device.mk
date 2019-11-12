@@ -28,6 +28,9 @@ PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/vince \
     device/xiaomi/msm8953-common
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay/packages/apps/Snap
+
 # Inherit from msm8953-common
 $(call inherit-product, device/xiaomi/msm8953-common/msm8953.mk)
 
