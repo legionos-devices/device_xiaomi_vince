@@ -21,12 +21,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from vince device
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
-# Inherit some common Nitrogen OS stuff.
-$(call inherit-product, vendor/nitrogen/products/common.mk)
+# Inherit some common Legion OS stuff.
+$(call inherit-product, vendor/legion/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
-PRODUCT_NAME := nitrogen_vince
+PRODUCT_NAME := legion_vince
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 5 Plus
