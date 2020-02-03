@@ -46,4 +46,5 @@
 
     <!-- Whether to intercept inputs on screen off. -->
     <bool name="config_enableKeyHandler">true</bool>
+    <bool name="config_deviceSupportSmartCharging">true</bool>
 </resources>
