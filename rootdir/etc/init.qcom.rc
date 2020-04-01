@@ -255,6 +255,8 @@ on property:vendor.radio.atfwd.start=false
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
+setprop vendor.post_boot.parsed 1
+
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
     restart vendor.audio-hal-2-0
