@@ -21,9 +21,6 @@
      for different hardware and product builds. -->
 <resources>
 
-	<!-- more realistic padding -->
-    <dimen name="rounded_corner_content_padding">16dp</dimen>
-    <!-- Rounded display corners-->
-    <dimen name="rounded_corner_radius">20dp</dimen>
-
+    <!-- more realistic padding -->
+    <dimen name="rounded_corner_content_padding">6dp</dimen>
 </resources>
