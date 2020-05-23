@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
 # Inherit some common Legion OS stuff.
-$(call inherit-product, vendor/legion/config/common.mk)
+$(call inherit-product, vendor/legion/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
@@ -40,6 +40,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "google/coral/coral:10/QQ2A.200501.001.A3/6353761:user/release-keys"
+
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 #Official
 LEGION_BUILD_TYPE := OFFICIAL
