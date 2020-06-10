@@ -47,7 +47,7 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 872415232
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0020/input/input2/wake_gesture"
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2019-05-05
+VENDOR_SECURITY_PATCH := 2020-05-05
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
