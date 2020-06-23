@@ -33,6 +33,8 @@ TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
 
 # Kernel
 TARGET_KERNEL_CONFIG := vince_defconfig
+#TARGET_KERNEL_CLANG_COMPILE := true
+#TARGET_KERNEL_CLANG_VERSION := proton
 
 # Partitions
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 25765043200 # 25765059584 - 16384
@@ -49,9 +51,6 @@ VENDOR_SECURITY_PATCH := 2019-03-05
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-
-#NeverAllows
-SELINUX_IGNORE_NEVERALLOWS := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/vince/BoardConfigVendor.mk
