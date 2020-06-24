@@ -49,6 +49,9 @@ on boot
     chown system system /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0020/input/input2/wake_gesture
     write /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0020/input/input2/wake_gesture 1
 
+    # FPS Info
+    chown system graphics /sys/class/graphics/fb0/measured_fps
+    chmod 0666 /sys/class/graphics/fb0/measured_fps
 
 on property:sys.fp.vendor=goodix
    setprop ro.boot.fpsensor goodix
