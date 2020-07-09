@@ -136,6 +136,12 @@ PRODUCT_PACKAGES += \
     libldacBT_dec \
     libbt-vendor
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.btconfigstore@1.0.vendor
+
+
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
