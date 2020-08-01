@@ -265,3 +265,7 @@ ro.maintainer.name=Rajkale99
 # Cpu
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.processor.model=Snapdragon_625
+
+# Enable QC2 bufferqueue block-pool
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.qc2.use.bqpool=1
