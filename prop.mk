@@ -228,7 +228,11 @@ wifi.interface=wlan0
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.wfd.virtual=0
 
-# havocOS maintainer
+# Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.havoc.maintainer=KenHV
+ro.maintainer.name=Rajkale99
+
+# Cpu
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.processor.model=Snapdragon_625
 
