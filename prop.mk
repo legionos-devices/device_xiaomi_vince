@@ -254,3 +254,11 @@ wifi.interface=wlan0
 # Wifi-Display
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.wfd.virtual=0
+
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.maintainer.name=Rajkale99
+
+# Cpu
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.processor.model=Snapdragon_625
