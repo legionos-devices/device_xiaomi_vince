@@ -662,4 +662,18 @@
     <!-- Delay that allows some content to arrive at the display before switching
          from DOZE to ON, in millis. -->
     <integer name="config_wakeUpDelayDoze">32</integer>
+
+    <bool name="config_deviceSupportSmartCharging">true</bool>
+    <!-- Smart charge sysfs node and value for suspend/resume charging-->
+    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
+    <string name="config_SmartChargingSupspendValue" translatable="false">0</string>
+    <string name="config_SmartChargingResumeValue" translatable="false">1</string>
+
+    <string name="config_sysCPUTemp">/sys/class/thermal/thermal_zone4/temp</string>
+    <string name="config_sysBatteryTemp">/sys/class/power_supply/battery/temp</string>
+    <string name="config_sysGPUFreq">/sys/kernel/gpu/gpu_clock</string>
+    <string name="config_sysGPULoad">/sys/kernel/gpu/gpu_busy</string>
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
+    <integer name="config_sysBatteryTempMultiplier">10</integer>
+
 </resources>
