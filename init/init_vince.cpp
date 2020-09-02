@@ -29,52 +29,17 @@
 #include <stdlib.h>
 #include <sys/sysinfo.h>
 
-#include "vendor_init.h"
 #include "log/log.h"
+#include "property_service.h"
+#include "vendor_init.h"
 
-char const *heapstartsize;
-char const *heapgrowthlimit;
-char const *heapsize;
-char const *heaptargetutilization;
-char const *heapminfree;
-char const *heapmaxfree;
-int property_set(const char *key, const char *value) {
-    return __system_property_set(key, value);
-}
+using android::init::property_set;
 
-void check_device()
-{
-    struct sysinfo sys;
-
-    sysinfo(&sys);
-
-    if (sys.totalram > 3072ull * 1024 * 1024) {
-        // from - xxhdpi-4096-dalvik-heap.mk
-        heapstartsize = "16m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heaptargetutilization = "0.75";
-        heapminfree = "4m";
-        heapmaxfree = "8m";
-    } else {
-        // from - xxhdpi-3072-dalvik-heap.mk
-        heapstartsize = "8m";
-        heapgrowthlimit= "288m";
-        heapsize = "768m";
-        heaptargetutilization = "0.75";
-        heapminfree = "2m";
-        heapmaxfree = "8m";
-   }
-}
-
-void vendor_load_properties()
-{
-    check_device();
-
-    SetProperty("dalvik.vm.heapstartsize", heapstartsize);
-    SetProperty("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    SetProperty("dalvik.vm.heapsize", heapsize);
-    SetProperty("dalvik.vm.heaptargetutilization", heaptargetutilization);
-    SetProperty("dalvik.vm.heapminfree", heapminfree);
-    SetProperty("dalvik.vm.heapmaxfree", heapmaxfree);
+void vendor_load_properties() {
+  property_set("dalvik.vm.heapstartsize", "8m");
+  property_set("dalvik.vm.heapgrowthlimit", "192m");
+  property_set("dalvik.vm.heapsize", "512m");
+  property_set("dalvik.vm.heaptargetutilization", "0.6");
+  property_set("dalvik.vm.heapminfree", "8m");
+  property_set("dalvik.vm.heapmaxfree", "16m");
 }
