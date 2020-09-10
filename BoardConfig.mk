@@ -136,7 +136,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Display
-TARGET_SCREEN_DENSITY := 480
+TARGET_SCREEN_DENSITY := 440
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 TARGET_USES_GRALLOC1 := true
@@ -230,7 +230,9 @@ VENDOR_SECURITY_PATCH := 2020-01-01
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-# BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-tmp
+
+# SurfaceFlinger
+TARGET_USE_QCOM_SURFACEFLINGER := true
 
 # Thermal
 TARGET_WITH_THERMAL := true
