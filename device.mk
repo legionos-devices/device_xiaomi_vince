@@ -164,7 +164,9 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdMetaData.system \
     libgenlock \
-    libtinyxml
+    libtinyxml \
+    libhwbinder \
+    libhwbinder.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
