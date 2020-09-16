@@ -2,6 +2,9 @@
 # system.prop for vince
 #
 
+# Cam2api
+persist.camera.HAL3.enabled=1
+
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
 dalvik.vm.dex2oat-filter=speed \
