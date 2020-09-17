@@ -2,9 +2,6 @@
 # system.prop for vince
 #
 
-# Cam2api
-persist.camera.HAL3.enabled=1
-
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
 dalvik.vm.dex2oat-filter=speed \
@@ -78,7 +75,8 @@ persist.camera.isp.clock.optmz=0 \
 persist.camera.stats.test=5 \
 persist.vendor.qti.telephony.vt_cam_interface=2 \
 vidc.enc.dcvs.extra-buff-count=2 \
-persist.camera.CDS=off
+persist.camera.CDS=off \
+persist.camera.HAL3.enabled=1
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
