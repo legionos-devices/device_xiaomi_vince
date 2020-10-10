@@ -1,2 +1,7 @@
 # vibrator
 allow system_server sysfs_vibrator:file read;
+
+# R
+allow system_server exported_camera_prop:file { read };
+allow system_server sysfs:file { read };
+allow system_server default_android_service:service_manager { add };
