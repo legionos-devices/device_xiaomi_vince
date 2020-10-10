@@ -1,1 +1,0 @@
-allow gmscore_app hal_memtract_default:binder { call }
