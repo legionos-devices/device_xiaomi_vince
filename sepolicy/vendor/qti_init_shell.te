@@ -10,3 +10,8 @@ allow qti_init_shell bluetooth_data_file:file r_file_perms;
 allow qti_init_shell self:socket create;
 
 allow qti_init_shell { sysfs sysfs_dm }:file write;
+
+# R
+allow qti_init_shell vfat:dir { search };
+allow qti_init_shell system_data_file:dir { write };
+allow qti_init_shell system_data_file:dir { getattr };
